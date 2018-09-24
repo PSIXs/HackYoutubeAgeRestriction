@@ -8,8 +8,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 });
 chrome.tabs.onUpdated.addListener(
   function(tabId, changeInfo, tab) {
-    // read changeInfo data and do something with it
-    // like send the new url to contentscripts.js
-    // todo implement page restoring
+    var new_url = changeInfo.url;
+    if (new_url != undefined && new_url.indexOf('youtube') !==-1 ) {
+      chrome.tabs.query({active:true,currentWindow: true}, function(tabs){
+        chrome.tabs.sendMessage(tabs[0].id, {todo: "reloadPage"});
+    });
+    }
   }
 );
