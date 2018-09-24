@@ -23,10 +23,17 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
     if (request.todo == "unblockVideo") {
       var page_href = window.location.href;
       new_code = '<iframe width="971" height="546" src="https://www.youtube.com/embed/'+get_video_id(page_href)+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
-      $('#player').text("").append(new_code);
+      alert(get_video_id(page_href));
+      var new_player = this.document.createElement("span");
+      new_player.innerHTML = new_code;
+      var myNode = this.document.getElementById("player-container-outer");
+      myNode = myNode.parentNode;
+      while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+      }
+      myNode.appendChild(new_player);  
     }
     if (request.todo == "reloadPage") {
       document.location.reload(true);
-      window.alert("Roflan ebalo");
     }
 });
