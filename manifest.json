@@ -17,10 +17,12 @@
 
   "content_scripts":[
     {
-      "matches": ["https://*/*"],
-      "js": ["content.js", "jquery-3.1.0.min.js"]
+      "matches": [ "*://*.youtube.com/*" ],
+      "js": ["content.js", "jquery-3.1.0.min.js"],
+      "run_at": "document_idle"
     }
   ],
 
-  "permissions": ["tabs", "storage"]
+  "permissions": ["*://youtube.com/*",
+    "*://www.youtube.com/*", "tabs", "storage"]
 }
