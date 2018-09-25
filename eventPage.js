@@ -10,9 +10,7 @@ chrome.tabs.onUpdated.addListener(
   function(tabId, changeInfo, tab) {
     var new_url = changeInfo.url;
     if (new_url != undefined && new_url.indexOf('youtube') !==-1 ) {
-      chrome.tabs.query({active:true,currentWindow: true}, function(tabs){
-        chrome.tabs.sendMessage(tabs[0].id, {todo: "reloadPage"});
-    });
+      chrome.tabs.sendMessage(tabId, {todo: "reloadPage"});
     }
   }
 );
