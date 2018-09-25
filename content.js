@@ -30,9 +30,13 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
       while (myNode.firstChild) {
         myNode.removeChild(myNode.firstChild);
       }
-      myNode.appendChild(new_player);  
+      new_player.id = "roflancheckme";
+      myNode.appendChild(new_player);
     }
     if (request.todo == "reloadPage") {
-      document.location.reload(true);
+      if (document.getElementById("roflancheckme").innerHTML != "" 
+          && document.getElementById("roflancheckme").innerHTML != undefined) {
+        document.location.reload(true);
+      }
     }
 });
