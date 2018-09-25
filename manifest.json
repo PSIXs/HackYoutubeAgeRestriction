@@ -1,13 +1,13 @@
 {
   "manifest_version": 2,
 
-  "name": "YoutubeAgeBypass",
-  "description": "This extension bypass youtube age restriction",
+  "name": "EzYouTube",
+  "description": "YouTube age restriction bypass",
   "version": "0.9.0",
 
   "page_action": {
     "default_popup": "popup.html",
-    "default_title": "YoutubeAgeBypass"
+    "default_title": "EzYouTube"
   },
 
   "background": {
