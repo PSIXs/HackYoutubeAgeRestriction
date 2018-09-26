@@ -17,7 +17,7 @@ We are always to accecpt your pull requests and feedbacks
 
 * **Erkin Matkaziev** - *Initial work* - [erkin97](https://github.com/erkin97)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/PSIXs/EzYouTube/contributors) who participated in this project.
 
 ## License
 
