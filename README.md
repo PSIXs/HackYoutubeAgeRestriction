@@ -8,6 +8,9 @@ Google Chrome extension to watch age restricted videos on YouTube
 2. Go to `chrome://extensions/` and load it
 3. Enjoy
 
+or
+1. Install from [Chrome Market](https://chrome.google.com/webstore/detail/hack-youtube-age-resctric/beminpnpkipkcjiihdajhljlfokajddl/)
+
 ## Contributing
 
 We are always happy to accecpt your pull requests and feedbacks
