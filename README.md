@@ -10,7 +10,7 @@ Google Chrome extension to watch age restricted videos on YouTube
 
 ## Contributing
 
-We are always to accecpt your pull requests and feedbacks
+We are always happy to accecpt your pull requests and feedbacks
 
 
 ## Authors
