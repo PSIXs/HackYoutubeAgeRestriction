@@ -29,8 +29,5 @@
       "css" : ["style.css"],
       "run_at": "document_idle"
     }
-  ],
-
-  "permissions": ["*://youtube.com/*",
-    "*://www.youtube.com/*", "tabs", "storage"]
+  ]
 }
