@@ -1,14 +1,15 @@
 {
   "manifest_version": 2,
 
-  "name": "Hack YouTube Age Resctriction",
-  "description": "Watch age restricted videos without leaving youtube. Hack YouTube Age Restriction. Ez Life!!!",
-  "version": "1.0.0",
+  "name": "Hack YouTube Age Restriction",
+  "short_name": "HackYouTube",
+  "description": "YouTube age restriction bypass. Watch age restricted videos without leaving youtube. Hack YouTube Age Restriction.",
+  "version": "1.0.3",
   "author": "PSIXs",
 
   "page_action": {
     "default_popup": "popup.html",
-    "default_title": "HackYouTubeAgeRescriction"
+    "default_title": "HackYouTube"
   },
 
   "icons": { 
@@ -31,5 +32,5 @@
     }
   ],
 
-  "permissions":["tabs"]
+  "permissions":["*://*.youtube.com/*"]
 }
