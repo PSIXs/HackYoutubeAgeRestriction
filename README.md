@@ -1,4 +1,4 @@
-# EzYouTube
+# Hack YouTube Age Restriction
 
 Google Chrome extension to watch age restricted videos on YouTube
 
