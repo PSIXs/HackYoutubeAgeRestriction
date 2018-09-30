@@ -24,11 +24,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
       var page_href = window.location.href;
       var myNode = this.document.getElementById("player-container-outer");
 	  if (myNode == undefined || myNode.innerHTML == "") {	  
-	    alert("Hello ivan");
         var myNode = this.document.getElementById("player-container");
       }
-	  alert(myNode.innerHTML);
-	  alert("Hello pidr");	
       myNode = myNode.parentNode;
       var player_height = myNode.clientHeight;
       var player_width = myNode.clientWidth;
