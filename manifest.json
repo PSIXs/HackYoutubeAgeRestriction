@@ -3,13 +3,13 @@
 
   "name": "Hack YouTube Age Restriction",
   "short_name": "HackYouTube",
-  "description": "YouTube age restriction bypass plus  comments section. Watch age restricted videos without leaving youtube.",
-  "version": "1.0.7",
+  "description": "YouTube age restriction bypass plus comments section. Watch age restricted videos without leaving YouTube.",
+  "version": "1.0.8",
   "author": "PSIXs",
 
   "page_action": {
     "default_popup": "popup.html",
-    "default_title": "HackYouTube"
+    "default_title": "HackYouTube\n\nPress me to unblock video"
   },
 
   "icons": { 
