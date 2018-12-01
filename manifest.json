@@ -4,7 +4,7 @@
   "name": "Hack YouTube Age Restriction",
   "short_name": "HackYouTube",
   "description": "YouTube age restriction bypass plus comments section. Watch age restricted videos without leaving YouTube.",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "PSIXs",
 
   "page_action": {

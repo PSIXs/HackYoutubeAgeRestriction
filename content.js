@@ -37,6 +37,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
       }
       new_player.id = "roflancheckme";
       myNode.appendChild(new_player);
+      myNode.id = "new_player";
     }
     if (request.todo == "reloadPage") {
       if (document.getElementById("roflancheckme").innerHTML != "" 
