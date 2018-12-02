@@ -1,10 +1,12 @@
-chrome.runtime.sendMessage({todo: "showPageAction"});
+chrome.runtime.sendMessage({
+  todo: "showPageAction"
+});
 /**
  * 
  * @param {string} v_url 
  * @returns {string};
  */
-function get_video_id(v_url){
+function get_video_id(v_url) {
   if (v_url.indexOf("watch") == -1) {
     return "-1";
   }
@@ -19,30 +21,30 @@ function get_video_id(v_url){
   }
   return ans;
 }
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
-    if (request.todo == "unblockVideo") {
-      var page_href = window.location.href;
-      var myNode = this.document.getElementById("player-container-outer");
-	  if (myNode == undefined || myNode.innerHTML == "") {	  
-        var myNode = this.document.getElementById("player-container");
-      }
-      myNode = myNode.parentNode;
-      var player_height = myNode.clientHeight;
-      var player_width = myNode.clientWidth;
-      new_code = '<iframe class="unblocked" width="' + player_width + '" height="' + player_height + '" src="https://www.youtube.com/embed/'+get_video_id(page_href)+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
-      var new_player = this.document.createElement("span");
-      new_player.innerHTML = new_code;
-      while (myNode.firstChild) {
-        myNode.removeChild(myNode.firstChild);
-      }
-      new_player.id = "roflancheckme";
-      myNode.appendChild(new_player);
-      myNode.id = "new_player";
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  if (request.todo == "unblockVideo") {
+    var page_href = window.location.href;
+    var myNode = this.document.getElementById("player-container-outer");
+    if (myNode == undefined || myNode.innerHTML == "") {
+      var myNode = this.document.getElementById("player-container");
     }
-    if (request.todo == "reloadPage") {
-      if (document.getElementById("roflancheckme").innerHTML != "" 
-          && document.getElementById("roflancheckme").innerHTML != undefined) {
-        document.location.reload(true);
-      }
+    myNode = myNode.parentNode;
+    var player_height = myNode.clientHeight;
+    var player_width = myNode.clientWidth;
+    new_code = '<iframe class="unblocked" width="' + player_width + '" height="' + player_height + '" src="https://www.youtube.com/embed/' + get_video_id(page_href) + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+    var new_player = this.document.createElement("span");
+    new_player.innerHTML = new_code;
+    while (myNode.firstChild) {
+      myNode.removeChild(myNode.firstChild);
     }
+    new_player.id = "roflancheckme";
+    myNode.appendChild(new_player);
+    myNode.id = "new_player";
+  }
+  if (request.todo == "reloadPage") {
+    if (document.getElementById("roflancheckme").innerHTML != "" &&
+      document.getElementById("roflancheckme").innerHTML != undefined) {
+      document.location.reload(true);
+    }
+  }
 });
